@@ -17,3 +17,5 @@ mono_crash.*.json
 
 # C++ and Rust specific ignores
 *.o
+
+.DS_Store
