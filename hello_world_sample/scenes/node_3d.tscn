@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://bs687p72yx3xj"]
+
+[ext_resource type="Script" uid="uid://cy64ljfyjan1e" path="res://hello_world_sample/core/sandbox.gd" id="2_bps1o"]
+
+[node name="Node3D" type="Node3D"]
+
+[node name="Sandbox" type="Sandbox" parent="."]
+script = ExtResource("2_bps1o")
