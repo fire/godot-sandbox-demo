@@ -1,39 +1,43 @@
 extends Sandbox
 
 func _ready() -> void:
+	var fa: FileAccess = FileAccess.open("res://json_diff_sample/json_diff.elf", FileAccess.READ)
+	var buffer = fa.get_buffer(fa.get_length())
+	load_buffer(buffer)
+	print("Program buffer size: %d" % buffer.size())
 	# Set program variable in the scene
 	var source: String = JSON.stringify(JSON.from_native(self, true), "  ")
 	print("Godot source json: %s" % [source])
 	var reference: String = """{
   "__gdtype": "Object",
   "properties": {
-    "_import_path": {
-      "__gdtype": "NodePath",
-      "path": ""
+	"_import_path": {
+	  "__gdtype": "NodePath",
+	  "path": ""
     },
-    "auto_translate_mode": 0,
-    "editor_description": "",
-    "execution_timeout": 8000,
-    "memory_max": 16,
-    "monitor_accumulated_startup_time": 0.0044,
-    "monitor_calls_made": 0,
-    "monitor_exceptions": 0,
-    "monitor_execution_timeouts": 0,
-    "monitor_global_calls_made": 0,
-    "monitor_global_exceptions": 0,
-    "monitor_global_execution_timeouts": 0,
-    "monitor_global_instance_count": 1,
-    "monitor_heap_usage": 1152,
-    "physics_interpolation_mode": 0,
-    "process_mode": 0,
-    "process_physics_priority": 0,
-    "process_priority": 0,
-    "process_thread_group": 0,
-    "references_max": 100,
-    "restrictions": false,
-    "unique_name_in_owner": false,
-    "use_precise_simulation": false,
-    "use_unboxed_arguments": false
+	"auto_translate_mode": 0,
+	"editor_description": "",
+	"execution_timeout": 8000,
+	"memory_max": 16,
+	"monitor_accumulated_startup_time": 0.0044,
+	"monitor_calls_made": 0,
+	"monitor_exceptions": 0,
+	"monitor_execution_timeouts": 0,
+	"monitor_global_calls_made": 0,
+	"monitor_global_exceptions": 0,
+	"monitor_global_execution_timeouts": 0,
+	"monitor_global_instance_count": 1,
+	"monitor_heap_usage": 1152,
+	"physics_interpolation_mode": 0,
+	"process_mode": 0,
+	"process_physics_priority": 0,
+	"process_priority": 0,
+	"process_thread_group": 0,
+	"references_max": 100,
+	"restrictions": false,
+	"unique_name_in_owner": false,
+	"use_precise_simulation": false,
+	"use_unboxed_arguments": false
   },
   "type": "Sandbox"
 }"""

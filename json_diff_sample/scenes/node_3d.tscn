@@ -1,10 +1,12 @@
 [gd_scene load_steps=3 format=3 uid="uid://bmpfr060yghgm"]
 
-[ext_resource type="Script" uid="uid://cse3kqeleuh7f" path="res://json_diff_sample/json_diff.elf" id="1_1k5cd"]
 [ext_resource type="Script" uid="uid://c2xg6e1li2o3h" path="res://json_diff_sample/core/sandbox.gd" id="1_i7ehx"]
+
+[sub_resource type="ELFScript" id="ELFScript_1k5cd"]
 
 [node name="Node3D" type="Node3D"]
 
 [node name="Sandbox" type="Sandbox" parent="."]
-program = ExtResource("1_1k5cd")
+unboxed_arguments = true
+program = SubResource("ELFScript_1k5cd")
 script = ExtResource("1_i7ehx")
