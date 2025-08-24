@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Slide Knight Project"
-run/main_scene="uid://bmpfr060yghgm"
+run/main_scene="uid://b84pppfu6tvr1"
 config/features=PackedStringArray("4.5")
 config/icon="res://icon.svg"
 

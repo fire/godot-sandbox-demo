@@ -1,6 +1,6 @@
 [gd_scene load_steps=17 format=3 uid="uid://xeqdf1ewjhxu"]
 
-[ext_resource type="Script" path="res://slide_knight/core/coin/coin.elf" id="1_aog4e"]
+[ext_resource type="Script" uid="uid://itoc8ken2w1t" path="res://slide_knight/core/coin/coin.elf" id="1_aog4e"]
 [ext_resource type="Texture2D" uid="uid://brxo4d63q1oaj" path="res://slide_knight/art/coin.png" id="1_tuffh"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_bh5xd"]
@@ -102,6 +102,15 @@ animations = [{
 collision_mask = 2
 input_pickable = false
 script = ExtResource("1_aog4e")
+references_max = 100
+memory_max = 16
+execution_timeout = 8000
+allocations_max = 4000
+unboxed_arguments = true
+precise_simulation = false
+profiling = false
+restrictions = false
+program = ExtResource("1_aog4e")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("CircleShape2D_bh5xd")
@@ -111,6 +120,6 @@ texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_qswrl")
 animation = &"idle"
 autoplay = "idle"
-frame_progress = 0.226616
+frame_progress = 0.88184047
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

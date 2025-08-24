@@ -1,6 +1,7 @@
-[gd_scene load_steps=28 format=4 uid="uid://b84pppfu6tvr1"]
+[gd_scene load_steps=29 format=4 uid="uid://b84pppfu6tvr1"]
 
 [ext_resource type="PackedScene" uid="uid://xeqdf1ewjhxu" path="res://slide_knight/core/coin/coin.tscn" id="3_7jmnu"]
+[ext_resource type="Script" uid="uid://dyt8rd44pjnls" path="res://slide_knight/core/player/player.elf" id="5_eil7c"]
 [ext_resource type="Texture2D" uid="uid://bpcjl24ocxxgn" path="res://slide_knight/art/bg_santorini_layers/bg_santorini_1.png" id="5_xqaax"]
 [ext_resource type="PackedScene" uid="uid://88cmbmcw8e1j" path="res://slide_knight/core/player/player.tscn" id="6_8caog"]
 [ext_resource type="Texture2D" uid="uid://cee0asjwgfgcb" path="res://slide_knight/art/bg_santorini_layers/bg_santorini_2.png" id="6_rclri"]
@@ -354,6 +355,7 @@ tile_set = SubResource("TileSet_aeu1j")
 unique_name_in_owner = true
 position = Vector2(93, 187)
 collision_layer = 3
+program = ExtResource("5_eil7c")
 
 [node name="Camera2D" type="Camera2D" parent="Player"]
 position = Vector2(14, 3)

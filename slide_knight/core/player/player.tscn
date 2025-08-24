@@ -1,7 +1,7 @@
 [gd_scene load_steps=30 format=3 uid="uid://88cmbmcw8e1j"]
 
 [ext_resource type="Texture2D" uid="uid://e8ly5vhjwurk" path="res://slide_knight/art/knight.png" id="1_1y0ug"]
-[ext_resource type="Script" path="res://slide_knight/core/player/player.elf" id="1_l4exu"]
+[ext_resource type="Script" uid="uid://dyt8rd44pjnls" path="res://slide_knight/core/player/player.elf" id="2_i1fwq"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_88l7n"]
 size = Vector2(12, 12)
@@ -207,16 +207,19 @@ animations = [{
 [node name="Player" type="CharacterBody2D"]
 collision_layer = 2
 collision_mask = 3
-script = ExtResource("1_l4exu")
+script = ExtResource("2_i1fwq")
 player_speed = 150.0
 player_jump_vel = -300.0
-player_name = "Slide Knight"
+player_name = "Slight Knight"
 references_max = 100
 memory_max = 16
 execution_timeout = 8000
-use_unboxed_arguments = true
-use_precise_simulation = false
+allocations_max = 4000
+unboxed_arguments = true
+precise_simulation = false
+profiling = false
 restrictions = false
+program = ExtResource("2_i1fwq")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2(0, -6)

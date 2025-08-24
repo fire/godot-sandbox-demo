@@ -1,9 +1,9 @@
 [gd_scene load_steps=2 format=3 uid="uid://b3ve27fwfptk0"]
 
-[ext_resource type="Script" path="res://slide_knight/core/killzone/killzone.elf" id="1_v34wd"]
+[ext_resource type="Script" uid="uid://nv651qicyjn6" path="res://slide_knight/core/killzone/killzone.elf" id="1_a1deb"]
 
 [node name="KillZone" type="Area2D"]
-script = ExtResource("1_v34wd")
+script = ExtResource("1_a1deb")
 
 [node name="Timer" type="Timer" parent="."]
 
